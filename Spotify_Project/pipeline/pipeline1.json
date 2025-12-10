@@ -176,7 +176,7 @@
 										"file": "@concat(pipeline().parameters.table,'-',variables('variable'))"
 									}
 								},
-								"enableLogging": true,
+								"enableLogging": false,
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
 									"recursive": true,
@@ -207,7 +207,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "SELECT MAX([@{pipeline().parameters.cdc_col}]) \nFROM [@{pipeline().parameters.Schema}].[@{pipeline().parameters.table}]",
+											"value": "SELECT MAX(@{pipeline().parameters.cdc_col}) as cdc\nFROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table}",
 											"type": "Expression"
 										}
 									}
@@ -240,7 +240,10 @@
 									"additionalColumns": [
 										{
 											"name": "cdc",
-											"value": ""
+											"value": {
+												"value": "@activity('max_cdc').output.resultsets[0].rows[0].cdc",
+												"type": "Expression"
+											}
 										}
 									],
 									"storeSettings": {
@@ -268,7 +271,11 @@
 									"referenceName": "empty_dynamic",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": "bronze"
+										"container": "bronze",
+										"folder": {
+											"value": "cdc",
+											"type": "Expression"
+										}
 									}
 								}
 							],
