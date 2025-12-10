@@ -44,11 +44,12 @@ The architecture prioritizes **security** (via Key Vault) and **efficiency** (vi
 
 ## 🌟 Key Technical Highlights
 
-### 🔹 1. CDC & Incremental Loading (Currently Implemented)
+### 🔹 1. CDC & Incremental Loading | Implement Backfill to retrieve Historical Data when needed
 **The Challenge:** Full data reloads are inefficient and costly for large SQL datasets.
 **The Solution:**
 * Implemented **Change Data Capture (CDC)** on the Azure SQL Source.
 * Configured ADF pipelines to detect specific Date from JSON and only ingest dates greater than the last run.
+* Configured Backfill Feature on existing pipeline to enable Historical Data access from any Date Range.
 * **Impact:** Reduces daily data ingress volume by **95%** and ensures near real-time data freshness.
 
 ### 🔹 2. Security-First Design
