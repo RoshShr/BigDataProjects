@@ -20,7 +20,7 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": "empty.json",
 				"fileSystem": {
-					"value": "@dataset().container",
+					"value": "bronze",
 					"type": "Expression"
 				}
 			}
