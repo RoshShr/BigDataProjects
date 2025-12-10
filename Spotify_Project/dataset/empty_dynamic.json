@@ -20,7 +20,7 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": "empty.json",
 				"folderPath": {
-					"value": "@dataset().folder",
+					"value": "cdc",
 					"type": "Expression"
 				},
 				"fileSystem": {
