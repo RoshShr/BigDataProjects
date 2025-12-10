@@ -18,7 +18,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "cdc.json",
+				"fileName": "empty.json",
 				"folderPath": {
 					"value": "cdc",
 					"type": "Expression"
