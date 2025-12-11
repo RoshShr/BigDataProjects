@@ -17,12 +17,7 @@
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "empty.json",
-				"fileSystem": {
-					"value": "bronze",
-					"type": "Expression"
-				}
+				"type": "AzureBlobFSLocation"
 			}
 		},
 		"schema": {}
