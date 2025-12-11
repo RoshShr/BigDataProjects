@@ -69,7 +69,7 @@
 						"parameters": {
 							"Container": "bronze",
 							"folder": {
-								"value": "@pipeline().parameters.table",
+								"value": "@{pipeline().parameters.table}_cdc",
 								"type": "Expression"
 							},
 							"file": {
@@ -244,7 +244,7 @@
 										{
 											"name": "cdc",
 											"value": {
-												"value": "@activity('max_cdc').output.resultsets[0].rows[0].cdc",
+												"value": "@activity('max_cdc').output.resultSets[0].rows[0].cdc",
 												"type": "Expression"
 											}
 										}
@@ -271,14 +271,15 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "empty_dynamic",
+									"referenceName": "empty_json",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
 										"folder": {
 											"value": "@{pipeline().parameters.table}_cdc",
 											"type": "Expression"
-										}
+										},
+										"file": "empty.json"
 									}
 								}
 							],
