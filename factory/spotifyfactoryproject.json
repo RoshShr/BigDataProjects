@@ -1,0 +1,9 @@
+{
+	"name": "spotifyfactoryproject",
+	"location": "australiasoutheast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "98eb1bec-bc51-47c1-af03-8ee0aaef017a",
+		"tenantId": "bc8c83ad-b7b2-4689-990e-f5226edafd88"
+	}
+}
