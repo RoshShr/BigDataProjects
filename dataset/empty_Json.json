@@ -1,0 +1,28 @@
+{
+	"name": "empty_Json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folder": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "empty.json",
+				"folderPath": {
+					"value": "@dataset().folder",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			}
+		},
+		"schema": {}
+	}
+}
