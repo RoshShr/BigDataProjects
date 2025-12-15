@@ -1,0 +1,28 @@
+{
+	"name": "cdc_Json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"table": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "cdc.json",
+				"folderPath": {
+					"value": "@dataset().table",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			}
+		},
+		"schema": {}
+	}
+}
