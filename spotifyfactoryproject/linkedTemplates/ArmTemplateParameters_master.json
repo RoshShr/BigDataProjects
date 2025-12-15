@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "spotifyfactoryproject"
+		},
+		"ADFtoLake_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"SQLtoADF_password": {
+			"value": ""
+		},
+		"ADFtoLake_properties_typeProperties_url": {
+			"value": "https://spotifylakestorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://spotifylakestorage.dfs.core.windows.net/"
+		},
+		"SQLtoADF_properties_typeProperties_server": {
+			"value": "spotifyproject.database.windows.net"
+		},
+		"SQLtoADF_properties_typeProperties_database": {
+			"value": "spotifydb"
+		},
+		"SQLtoADF_properties_typeProperties_userName": {
+			"value": "adminrosh"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
