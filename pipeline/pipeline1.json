@@ -317,9 +317,7 @@
 					{
 						"activity": "ForEachActivity",
 						"dependencyConditions": [
-							"Skipped",
 							"Failed",
-							"Completed",
 							"Succeeded"
 						]
 					}
