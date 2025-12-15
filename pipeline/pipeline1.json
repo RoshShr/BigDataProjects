@@ -12,6 +12,7 @@
 						"value": "@pipeline().parameters.eachloop",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "SQLtoLake",

@@ -17,7 +17,7 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": "cdc.json",
 				"folderPath": {
-					"value": "dataset().table",
+					"value": "@dataset().table",
 					"type": "Expression"
 				},
 				"fileSystem": "bronze"
