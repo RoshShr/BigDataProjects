@@ -14,5 +14,9 @@
 	{
 	"csv_relative_url": "BigDataProjects/refs/heads/main/Project-%20Brazilian%20Ecommerce/Olist%20Datasets/olist_order_reviews_dataset.csv",
 	"file_name": "olist_order_reviews_dataset.csv"
+	},
+	{
+	"csv_relative_url": "BigDataProjects/refs/heads/main/Project-%20Brazilian%20Ecommerce/Olist%20Datasets/olist_orders_dataset.csv",
+	"file_name": "olist_orders_dataset.csv"
 	}
 ]
